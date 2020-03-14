@@ -49,12 +49,12 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
       //     x is equal to either x_offset OR x_offset + size2 -1)
       // if so, print a *
       if((isInRange(x, x_offset, size2) && isAtBorder(y, y_offset, size2)) || (isInRange(y, y_offset, size2) && isAtBorder(x, x_offset, size2))) {
-	  printf("*");
+	printf("*");
       } else if((x < size1 && isAtBorder(y, 0, size1)) || (y < size1 && isAtBorder(x, 0, size1))) {
-	    printf("#");
-	} else {
-	    printf(" ");
-	}
+	printf("#");
+      } else {
+	printf(" ");
+      }
       //if not,
       // check if EITHER
       //    x is less than size1 AND (y is either 0 or size1-1)
@@ -66,6 +66,6 @@ void squares(int size1, int x_offset, int y_offset, int size2) {
     }
     //when you finish counting x from 0 to w, 
     //print a newline
-	printf("\n");
+    printf("\n");
   }
 }
